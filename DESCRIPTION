@@ -2,8 +2,7 @@ Package: proverbs
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Brad", "Lindblad", , "me@bradlindblad.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Suggests: 
@@ -15,3 +14,9 @@ RoxygenNote: 7.1.1
 URL: https://github.com/bradlindblad/proverbs,
     https://bradlindblad.github.io/proverbs/
 BugReports: https://github.com/bradlindblad/proverbs/issues
+Imports: 
+    magrittr,
+    httr,
+    purrr,
+    crayon,
+    lubridate
