@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/proverbs)](https://CRAN.R-project.org/package=proverbs)
 [![R-CMD-check](https://github.com/bradlindblad/proverbs/workflows/R-CMD-check/badge.svg)](https://github.com/bradlindblad/proverbs/actions)
+[![Codecov test coverage](https://codecov.io/gh/bradlindblad/proverbs/branch/master/graph/badge.svg)](https://app.codecov.io/gh/bradlindblad/proverbs?branch=master)
 <!-- badges: end -->
 
 The goal of proverbs is to ...

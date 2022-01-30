@@ -4,11 +4,26 @@
 \alias{proverb}
 \title{proverb}
 \usage{
-proverb()
+proverb(translation = "web")
 }
-\value{
-
+\arguments{
+\item{translation}{A character string that is available from list returned by \code{translations()}}
 }
 \description{
-proverb
+Prints out a daily proverb corresponding to the current day of the month.
+For example, on the 27th of August, Proverbs 27 would be returned.
+}
+\note{
+Several open source translations are available. By default, the World English Bible version is returned.
+To see which translations are available, use the \code{translations()} function.
+}
+\examples{
+\dontrun{
+# Return the default translation, which is "web", or World English Bible
+proverb()
+
+# Return the King James version verse of the day
+proverb(translation="kjv")
+
+}
 }
