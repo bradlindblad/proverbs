@@ -1,4 +1,6 @@
 url: https://bradlindblad.github.io/proverbs/
 template:
-  bootstrap: 3
+  bootstrap: 5
+  bootswatch: morph
+  theme: nord
 
