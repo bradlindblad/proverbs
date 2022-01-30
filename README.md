@@ -76,12 +76,9 @@ proverbs::translations()
     • bbe: Bible in Basic English
     • kjv: King James Version
     • web: World English Bible (default)
-    • webbe: World English Bible, British
-    Edition
-    • almeida: João Ferreira de Almeida
-    (portuguese)
-    • rccv: Romanian Corrected Cornilescu
-    Version
+    • webbe: World English Bible, British Edition
+    • almeida: João Ferreira de Almeida (portuguese)
+    • rccv: Romanian Corrected Cornilescu Version
 
     ── Pass the Bible translation you choose above to proverb(), like: 
     proverb('kjv')
