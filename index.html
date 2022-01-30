@@ -90,23 +90,24 @@
 </h2>
 <p>The proverbs package was built to do one thing: print out a daily proverb to your R console. There are 31 proverbs, and up to 31 days in each month.</p>
 <p>Many people like to read a proverb for each day of the month, so they end up reading proverbs once a month, twelve times a year.</p>
+<p>This package prints the chapter of proverbs that corresponds to that day of the month; ie. on the 21st of June proverbs will print Proverbs 21.</p>
 <div class="section level3">
 <h3 id="proverb">proverb()<a class="anchor" aria-label="anchor" href="#proverb"></a>
 </h3>
 <p>This is the main function:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="reference/proverb.html">proverb</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>Proverbs <span class="dv">30</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>For Sunday, January <span class="dv">30</span> <span class="dv">2022</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a> </span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="dv">1</span> The words of Agur the son of Jakeh; the revelation<span class="op">:</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>the man says to Ithiel,</span>
-<span id="cb4-6"><a href="#cb4-6"></a>to Ithiel and Ucal<span class="op">:</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="dv">2</span> “Surely I am the most ignorant man,</span>
-<span id="cb4-8"><a href="#cb4-8"></a>and don’t have a man’s understanding.</span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="dv">3</span> I have not learned wisdom,</span>
-<span id="cb4-10"><a href="#cb4-10"></a>neither do I have the knowledge of the Holy One.</span>
-<span id="cb4-11"><a href="#cb4-11"></a>...</span></code></pre></div>
+<pre class="text"><code>Proverbs 30
+For Sunday, January 30 2022
+ 
+1 The words of Agur the son of Jakeh; the revelation:
+the man says to Ithiel,
+to Ithiel and Ucal:
+2 “Surely I am the most ignorant man,
+and don’t have a man’s understanding.
+3 I have not learned wisdom,
+neither do I have the knowledge of the Holy One.
+...</code></pre>
 </div>
 <div class="section level3">
 <h3 id="translations">translations()<a class="anchor" aria-label="anchor" href="#translations"></a>
@@ -114,17 +115,17 @@
 <p>You can also change the Bible translation to one of many open source/public versions. Check these out with this function:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="reference/translations.html">translations</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>── Bible Translations Available ────────────</span>
-<span id="cb6-2"><a href="#cb6-2"></a>• bbe<span class="op">:</span><span class="st"> </span>Bible <span class="cf">in</span> Basic English</span>
-<span id="cb6-3"><a href="#cb6-3"></a>• kjv<span class="op">:</span><span class="st"> </span>King James Version</span>
-<span id="cb6-4"><a href="#cb6-4"></a>• web<span class="op">:</span><span class="st"> </span>World English <span class="kw">Bible</span> (default)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>• webbe<span class="op">:</span><span class="st"> </span>World English Bible, British Edition</span>
-<span id="cb6-6"><a href="#cb6-6"></a>• almeida<span class="op">:</span><span class="st"> </span>João Ferreira de <span class="kw">Almeida</span> (portuguese)</span>
-<span id="cb6-7"><a href="#cb6-7"></a>• rccv<span class="op">:</span><span class="st"> </span>Romanian Corrected Cornilescu Version</span>
-<span id="cb6-8"><a href="#cb6-8"></a></span>
-<span id="cb6-9"><a href="#cb6-9"></a>── Pass the Bible translation you choose above to <span class="kw">proverb</span>(), like<span class="op">:</span><span class="st"> </span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="kw">proverb</span>(<span class="st">'kjv'</span>)</span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="kw">proverb</span>(<span class="st">'bbe'</span>)</span></code></pre></div>
+<pre class="text"><code>── Bible Translations Available ────────────
+• bbe: Bible in Basic English
+• kjv: King James Version
+• web: World English Bible (default)
+• webbe: World English Bible, British Edition
+• almeida: João Ferreira de Almeida (portuguese)
+• rccv: Romanian Corrected Cornilescu Version
+
+── Pass the Bible translation you choose above to proverb(), like: 
+proverb(translation = 'kjv')
+proverb(translation = 'bbe')</code></pre>
 <p>You can pass those translation codes to <code><a href="reference/proverb.html">proverbs::proverb()</a></code></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="reference/proverb.html">proverb</a></span><span class="op">(</span>translation <span class="op">=</span> <span class="st">"kjv"</span><span class="op">)</span></code></pre></div>
@@ -134,6 +135,11 @@
 <h2 id="credit">Credit<a class="anchor" aria-label="anchor" href="#credit"></a>
 </h2>
 <p>The proverbs package takes advantage of the awesome free Bible api <a href="https://bible-api.com/" class="external-link uri">https://bible-api.com/</a>, maintained by <a href="https://timmorgan.org/" class="external-link">Tim Morgan</a>. Thanks, Tim!</p>
+</div>
+<div class="section level2">
+<h2 id="contact-me">Contact me<a class="anchor" aria-label="anchor" href="#contact-me"></a>
+</h2>
+<p>I can be reached at my website <a href="https://technistema.com" class="external-link">technistema.com</a></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
