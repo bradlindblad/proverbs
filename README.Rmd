@@ -13,9 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# proverbs
+# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/fig/logo.png?raw=true" align="right" alt="" width="120" />
 
-<img src='https://github.com/bradlindblad/proverbs/blob/master/fig/logo.png?raw=true' align="right" height="200" />
 
 <!-- badges: start -->
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)

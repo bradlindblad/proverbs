@@ -1,9 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# proverbs
-
-<img src='https://github.com/bradlindblad/proverbs/blob/master/fig/logo.png?raw=true' align="right" height="200" />
+# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/fig/logo.png?raw=true" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
