@@ -7,7 +7,7 @@
 translations()
 }
 \description{
-Lists available Bible Versions for proverb()
+Lists available Bible Versions for \code{proverb()}
 }
 \examples{
 \dontrun{

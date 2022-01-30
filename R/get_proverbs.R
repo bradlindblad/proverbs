@@ -94,7 +94,7 @@ proverb <- function(translation = "web") {
 
 #' translations
 #'
-#' Lists available Bible Versions for proverb()
+#' Lists available Bible Versions for `proverb()`
 #'
 #' @export
 #'
