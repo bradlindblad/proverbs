@@ -3,5 +3,5 @@
 #' A simple package to grab a Bible proverb corresponding to the day of the month.
 #'
 #' @docType package
-#' @name cheatsheet
+#' @name proverbs
 "_PACKAGE"
