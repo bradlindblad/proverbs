@@ -34,3 +34,9 @@ test_that("rccv works", {
   expect_output(proverb("rccv"))
 
 })
+
+test_that("give bad translation", {
+
+  expect_error(proverb("foo"))
+
+})

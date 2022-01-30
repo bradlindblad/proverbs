@@ -3,22 +3,27 @@ Title: Print a Daily Bible Proverb to Console
 Version: 0.0.0.9000
 Authors@R: 
     person("Brad", "Lindblad", , "me@bradlindblad.com", role = c("aut", "cre"))
-Description: A simple package to grab a Bible proverb corresponding to the day of the month.
+Description: A simple package to grab a Bible proverb corresponding to the
+    day of the month.
 License: MIT + file LICENSE
-Suggests: 
-    covr,
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
 URL: https://github.com/bradlindblad/proverbs,
     https://bradlindblad.github.io/proverbs/
 BugReports: https://github.com/bradlindblad/proverbs/issues
 Imports: 
-    magrittr,
-    httr,
-    purrr,
+    cli,
     crayon,
+    httr,
     lubridate,
-    cli
+    magrittr,
+    purrr
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

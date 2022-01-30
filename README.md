@@ -3,57 +3,98 @@
 
 # proverbs
 
+<img src='https://github.com/bradlindblad/proverbs/blob/master/fig/logo.png?raw=true' align="right" height="200" />
+
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/proverbs)](https://CRAN.R-project.org/package=proverbs)
 [![R-CMD-check](https://github.com/bradlindblad/proverbs/workflows/R-CMD-check/badge.svg)](https://github.com/bradlindblad/proverbs/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/bradlindblad/proverbs/branch/master/graph/badge.svg)](https://app.codecov.io/gh/bradlindblad/proverbs?branch=master)
+[![pkgdown](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
-The goal of proverbs is to …
+A simple package to grab a Bible proverb corresponding to the day of the
+month.
 
 ## Installation
+
+Install the released version of proverbs from CRAN:
+
+``` r
+install.packages("proverbs")
+```
 
 You can install the development version of proverbs like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+devtools::install_github("bradlindblad/proverbs")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+The proverbs package was built to do one thing: print out a daily
+proverb to your R console. There are 31 proverbs, and up to 31 days in
+each month.
+
+Many people like to read a proverb for each day of the month, so they
+end up reading proverbs once a month, twelve times a year.
+
+### proverb()
+
+This is the main function:
 
 ``` r
-# library(proverbs)
-## basic example code
+proverbs::proverb()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+    Proverbs 30
+    For Sunday, January 30 2022
+     
+    1 The words of Agur the son of Jakeh; the revelation:
+    the man says to Ithiel,
+    to Ithiel and Ucal:
+     2 “Surely I am the most ignorant man,
+    and don’t have a man’s understanding.
+     3 I have not learned wisdom,
+    neither do I have the knowledge of the Holy One.
+    ...
+
+### translations()
+
+You can also change the Bible translation to one of many open
+source/public versions. Check these out with this function:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+proverbs::translations()
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+    ── Bible Translations Available ────────────
+    • bbe: Bible in Basic English
+    • kjv: King James Version
+    • web: World English Bible (default)
+    • webbe: World English Bible, British
+    Edition
+    • almeida: João Ferreira de Almeida
+    (portuguese)
+    • rccv: Romanian Corrected Cornilescu
+    Version
 
-You can also embed plots, for example:
+    ── Pass the Bible translation you choose above to proverb(), like: 
+    proverb('kjv')
+    proverb('bbe')
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+You can pass those translation codes to `proverbs::proverb()`
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+proverbs::proverb(translation = "kjv")
+```
+
+## Credit
+
+The proverbs package takes advantage of the awesome free Bible api
+<https://bible-api.com/>, maintained by [Tim
+Morgan](https://timmorgan.org/). Thanks, Tim!
