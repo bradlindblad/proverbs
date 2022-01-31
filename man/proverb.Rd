@@ -9,6 +9,9 @@ proverb(translation = "web")
 \arguments{
 \item{translation}{A character string that is available from list returned by \code{translations()}}
 }
+\value{
+nothing
+}
 \description{
 Prints out a daily proverb corresponding to the current day of the month.
 For example, on the 27th of August, Proverbs 27 would be returned.

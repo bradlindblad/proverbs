@@ -18,6 +18,6 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Brad Lindblad \email{me@bradlindblad.com}
+\strong{Maintainer}: Brad Lindblad \email{me@bradlindblad.com} [copyright holder]
 
 }

@@ -10,6 +10,8 @@
 #' To see which translations are available, use the `translations()` function.
 #' @export
 #'
+#' @return nothing
+#'
 #' @examples
 #' \dontrun{
 #' # Return the default translation, which is "web", or World English Bible
@@ -97,6 +99,8 @@ proverb <- function(translation = "web") {
 #' Lists available Bible Versions for `proverb()`
 #'
 #' @export
+#'
+#' @return nothing
 #'
 #' @examples
 #' \dontrun{

@@ -6,6 +6,9 @@
 \usage{
 translations()
 }
+\value{
+nothing
+}
 \description{
 Lists available Bible Versions for \code{proverb()}
 }
