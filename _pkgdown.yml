@@ -1,6 +1,8 @@
 url: https://bradlindblad.github.io/proverbs/
 template:
   bootstrap: 5
-  bootswatch: morph
+  bootswatch: lux
   theme: nord
+  bslib:
+    pkgdown-nav-height: 100px
 
