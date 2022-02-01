@@ -1,0 +1,44 @@
+---
+title: "Print Proverb at R Startup"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Print Proverb at R Startup}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Sometimes it's necessary to *force* oneself to do the thing that one should do. One way to do this is to have proverbs print the day's proverb to console any time you start or restart R in RStudio.
+
+We can do that by modifying our .Rprofile file. For our purposes, we will modify the version that affects your base user environment.
+
+
+There is a handy function is the {usethis} package that helps us edit our .Rprofile:
+
+```{r, eval = FALSE}
+library(proverbs)
+library(usethis)
+```
+
+```{r, eval = FALSE}
+usethis::edit_r_profile(scope = "user")
+```
+
+This will open up our .Rprofile file, and and we have to do is throw in our function from {proverbs} to make it spit out a proverb at startup:
+
+```{r, eval = FALSE}
+if(interactive()) {
+
+proverbs::proverb()
+
+}
+```
+
+You'll need to restart your session but you should be greeted with a proverb after that.
+
