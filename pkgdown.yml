@@ -1,8 +1,9 @@
 pandoc: 2.7.3
 pkgdown: 2.0.2
 pkgdown_sha: ~
-articles: {}
-last_built: 2022-01-31T00:53Z
+articles:
+  auto_proverb: auto_proverb.html
+last_built: 2022-02-01T00:19Z
 urls:
   reference: https://bradlindblad.github.io/proverbs/reference
   article: https://bradlindblad.github.io/proverbs/articles
