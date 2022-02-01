@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   auto_proverb: auto_proverb.html
-last_built: 2022-02-01T15:38Z
+last_built: 2022-02-01T15:39Z
 urls:
   reference: https://bradlindblad.github.io/proverbs/reference
   article: https://bradlindblad.github.io/proverbs/articles
