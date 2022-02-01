@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/bradlindblad/proverbs/branch/master/graph/badge.svg)](https://app.codecov.io/gh/bradlindblad/proverbs?branch=master)
 [![pkgdown](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![CRAN status](https://www.r-pkg.org/badges/version/proverbs)](https://CRAN.R-project.org/package=proverbs)
 <!-- badges: end -->
 
 A simple package to grab a Bible proverb corresponding to the day of the month.
