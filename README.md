@@ -3,12 +3,17 @@
 
 # proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/man/figures/logo.png?raw=true" align="right" alt="" width="120" />
 
+*“When the whirlwind passes, the wicked is no more, but the righteous
+has an everlasting foundation”*
+
+*- Proverbs 10:25 (NASB)*
+
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/bradlindblad/proverbs/workflows/R-CMD-check/badge.svg)](https://github.com/bradlindblad/proverbs/actions)
+[![pkgdown](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/bradlindblad/proverbs/branch/master/graph/badge.svg)](https://app.codecov.io/gh/bradlindblad/proverbs?branch=master)
-[![pkgdown](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/bradlindblad/proverbs/actions/workflows/pkgdown.yaml)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN
