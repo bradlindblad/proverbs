@@ -4,10 +4,14 @@
 \alias{proverb}
 \title{proverb}
 \usage{
-proverb(translation = "web")
+proverb(translation = "web", main_color = "cyan", accent_color = "silver")
 }
 \arguments{
 \item{translation}{A character string that is available from list returned by \code{translations()}}
+
+\item{main_color}{A character string of a color available in the \href{https://github.com/r-lib/crayon#readme}{crayon package}. The color for the main body of text.}
+
+\item{accent_color}{A character string of a color available in the \href{https://github.com/r-lib/crayon#readme}{crayon package}. The accent color for the passage.}
 }
 \value{
 nothing
@@ -27,6 +31,9 @@ proverb()
 
 # Return the King James version verse of the day
 proverb(translation="kjv")
+
+# Custom colors
+proverb(main_color="red", accent_color="silver")
 
 }
 }

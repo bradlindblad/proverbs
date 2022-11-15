@@ -5,7 +5,8 @@
 #' For example, on the 27th of August, Proverbs 27 would be returned.
 #'
 #' @param translation A character string that is available from list returned by `translations()`
-#'
+#' @param main_color A character string of a color available in the [crayon package](https://github.com/r-lib/crayon#readme). The color for the main body of text.
+#' @param accent_color A character string of a color available in the [crayon package](https://github.com/r-lib/crayon#readme). The accent color for the passage.
 #' @note Several open source translations are available. By default, the World English Bible version is returned.
 #' To see which translations are available, use the `translations()` function.
 #' @export
@@ -20,8 +21,40 @@
 #' # Return the King James version verse of the day
 #' proverb(translation="kjv")
 #'
+#' # Custom colors
+#' proverb(main_color="red", accent_color="silver")
+#'
 #' }
-proverb <- function(translation = "web") {
+proverb <- function(translation = "web", main_color = "cyan", accent_color = "silver") {
+
+
+  good_colors <- c(
+    'black',
+    'red',
+    'green',
+    'yellow',
+    'blue',
+    'magenta',
+    'cyan',
+    'white',
+    'silver'
+  )
+
+  if(!main_color %in% good_colors | !accent_color %in% good_colors) {
+
+    stop(cat(
+      crayon::red("One of those colors is not available!\n"),
+      cli::symbol$warning,
+      crayon::green("Check the {crayon} website to see a list of supported colors: https://github.com/r-lib/crayon \n")
+      )
+    )
+
+  }
+
+  main_color <- getExportedValue('crayon', main_color)
+  accent_color <- getExportedValue('crayon', accent_color)
+
+
 
   versions <- c(
     "bbe",
@@ -76,7 +109,7 @@ proverb <- function(translation = "web") {
 
   n_verses <- length(verses)
   foo <- seq(1, n_verses, 1)
-  output <- paste(crayon::silver(foo), crayon::cyan(verses), collapse = " ")
+  output <- paste(accent_color(foo), main_color(verses), collapse = " ")
 
   a <- lubridate::wday(Sys.Date(), label = T, abbr = F) %>% as.character()
   b <- lubridate::month(Sys.Date(), label = T, abbr = F) %>% as.character()
@@ -84,11 +117,12 @@ proverb <- function(translation = "web") {
   d <- lubridate::year(Sys.Date())
 
   header <- paste0("\n\nProverbs ", c, "\nFor ",  a, ", ",b, " ", c, " ", d)
-  cat(crayon::bold(crayon::silver(header)))
+  cat(crayon::bold(accent_color(header)))
   cat("\n \n")
   cat(crayon::col_align(output, align = "center", width = 20))
   cat("\n")
-  cat(crayon::silver(paste0(crayon::green(cli::symbol$tick), " Translation: ", translation)))
+  cat(accent_color(paste0(main_color(cli::symbol$tick), " Translation: ", translation)))
+
 
 
 }
