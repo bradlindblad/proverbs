@@ -42,3 +42,17 @@ proverbs::proverb()
 
 You'll need to restart your session but you should be greeted with a proverb after that.
 
+If you want to customize the color of the printed output to sing more closely with your theme, for example, we can do that.
+
+
+```{r, eval = FALSE}
+if(interactive()) {
+
+proverbs::proverb(main_color = "black", accent_color = "silver")
+
+}
+```
+
+This will print your proverb in black text with silver (grey) highlights.
+
+
