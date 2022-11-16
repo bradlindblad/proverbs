@@ -40,3 +40,17 @@ test_that("give bad translation", {
   expect_error(proverb("foo"))
 
 })
+
+
+test_that("give bad main color", {
+
+  expect_error(proverb(main_color = "breh"))
+
+})
+
+
+test_that("give bad accent color", {
+
+  expect_error(proverb(accent_color = "bro"))
+
+})
