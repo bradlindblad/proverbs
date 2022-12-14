@@ -18,11 +18,11 @@ knitr::opts_chunk$set(
 library(proverbs)
 ```
 
-Certain bible translations are hidden behind an API key-wall, such as the [ESV - English Standard Version](esv.org). You can access the ESV version of your daily proverb after you obtain a free API key from the ESV website. Here are the steps; takes about 5 minutes.
+Certain bible translations are hidden behind an API key-wall, such as the [ESV - English Standard Version](https://www.esv.org/). You can access the ESV version of your daily proverb after you obtain a free API key from the ESV website. Here are the steps; takes about 5 minutes.
 
 ## Create an account
 
-Go to [ESV.org](esv.org) and sign up for a free account.
+Go to <https://www.esv.org/> and sign up for a free account.
 
 ## Create an API application
 
