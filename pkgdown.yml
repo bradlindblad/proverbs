@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   auto_proverb: auto_proverb.html
   esv_api_key: esv_api_key.html
-last_built: 2022-12-14T02:26Z
+last_built: 2022-12-14T21:40Z
 urls:
   reference: https://bradlindblad.github.io/proverbs/reference
   article: https://bradlindblad.github.io/proverbs/articles
