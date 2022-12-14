@@ -1,3 +1,5 @@
+# proverbs 0.3.0
+
 # proverbs 0.2.1
 Added support or ESV version
 
