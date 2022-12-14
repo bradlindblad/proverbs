@@ -1,6 +1,6 @@
 Package: proverbs
 Title: Print a Daily Bible Proverb to Console
-Version: 0.2.0
+Version: 0.2.0.9000
 Authors@R: 
     person("Brad", "Lindblad", , "me@bradlindblad.com", role = c("aut", "cre", "cph"))
 Description: A simple package to grab a Bible proverb corresponding to the
