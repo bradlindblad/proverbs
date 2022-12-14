@@ -1,0 +1,53 @@
+---
+title: "Setting API Key for ESV Translation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Setting API Key for ESV Translation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(proverbs)
+```
+
+Certain bible translations are hidden behind an API key-wall, such as the [ESV - English Standard Version](esv.org). You can access the ESV version of your daily proverb after you obtain a free API key from the ESV website. Here are the steps; takes about 5 minutes.
+
+## Create an account
+
+Go to [ESV.org](esv.org) and sign up for a free account.
+
+## Create an API application
+
+Navigate to <https://api.esv.org/account/> and click on **Create an API application:**
+
+![](images/paste-4BF92168.png)
+
+Check a few boxes and you'll see a token like this:
+
+![](images/paste-CB9A3468.png)
+
+Copy the token after **Token** and keep it handy.
+
+## Set the environmental variable in RStudio
+
+Assuming you're using RStudio, enter this token in a special environmental variable.
+
+```{r eval=FALSE}
+usethis::edit_r_environ()
+```
+
+![Note the empty line in the .Renviron file, it's important.](images/paste-C2AFB569.png)
+
+## Restart
+
+Restart your RStudio session and you should be able to view the ESV version
+
+![](images/paste-CF8CA6F0.png)

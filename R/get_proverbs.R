@@ -62,8 +62,13 @@ proverb <- function(translation = "web", main_color = "cyan", accent_color = "si
     "web",
     "webbe",
     "almeida",
-    "rccv"
+    "rccv",
+    "esv"
   )
+
+  TODAY <- Sys.Date() %>%
+    as.character() %>%
+    substr(start = 9, stop = 11)
 
   if(!translation %in% versions) {
     stop(cat(
@@ -76,11 +81,81 @@ proverb <- function(translation = "web", main_color = "cyan", accent_color = "si
     )
   }
 
+  if(translation == "esv") {
+
+
+    API_URL = 'https://api.esv.org/v3/passage/text/'
+
+
+    API_KEY <- Sys.getenv('ESV_API_KEY')
+    if (identical(API_KEY, "")) {
+      stop("Please set environmental variable `ESV_API_KEY` to your esv api key. Learn more at: https://bradlindblad.github.io/proverbs/articles/esv_api_key",
+           call. = FALSE)
+    }
+
+
+    VERSE = paste("Proverbs" , TODAY)
+    query <- list(
+      q = VERSE,
+      `include-headings` = FALSE,
+      `include-footnotes` = FALSE,
+      `include-verse-numbers` = TRUE,
+      `include-short-copyright` = FALSE,
+      `include-passage-references` = FALSE
+    )
+
+
+    headers <- c(
+      `Authorization` = paste0("Token ", API_KEY)
+
+    )
+
+    r <- httr::GET(
+      url = API_URL,
+      httr::add_headers(.headers = headers),
+      query = query
+    )
+
+
+    results <- httr::content(r)$passages
+
+
+    f <- as.character(results)
+
+    f <- stringr::str_split(results, "\\\n", simplify = T)
+
+    g <- f[1,]
+
+
+    # color diff parts
+    beginning <- purrr::map(g, stringr::str_sub, 1, 8)
+    beginning[1] <- paste0(" ", beginning[1])
+    body <- purrr::map(g, stringr::str_sub, 9, 99)
+    full_body <- paste(body, "\n")
+
+
+
+    output <- paste(accent_color(beginning), main_color(full_body))
+    a <- lubridate::wday(Sys.Date(), label = T, abbr = F) %>% as.character()
+    b <- lubridate::month(Sys.Date(), label = T, abbr = F) %>% as.character()
+    c <- lubridate::day(Sys.Date())
+    d <- lubridate::year(Sys.Date())
+
+    header <- paste0("\n\nProverbs ", c, "\nFor ",  a, ", ",b, " ", c, " ", d)
+    cat(crayon::bold(accent_color(header)))
+    cat("\n \n")
+
+    cat(output)
+
+    cat(accent_color(paste0(main_color(cli::symbol$tick), " Translation: ", "esv")))
+
+
+
+
+  }else{
+
   BASE_URL <- 'https://bible-api.com/proverbs%20'
 
-  TODAY <- Sys.Date() %>%
-    as.character() %>%
-    substr(start = 9, stop = 11)
 
   URL <- paste0(BASE_URL, TODAY, "?translation=", translation)
 
@@ -122,7 +197,7 @@ proverb <- function(translation = "web", main_color = "cyan", accent_color = "si
   cat(crayon::col_align(output, align = "center", width = 20))
   cat("\n")
   cat(accent_color(paste0(main_color(cli::symbol$tick), " Translation: ", translation)))
-
+  }
 
 
 }
@@ -143,13 +218,15 @@ proverb <- function(translation = "web", main_color = "cyan", accent_color = "si
 translations <- function() {
 
   translations <- c(
-      "bbe: Bible in Basic English",
+      "esv: English Standard Version -requires API key",
       "kjv: King James Version",
+      "bbe: Bible in Basic English",
       "web: World English Bible (default)",
       "webbe: World English Bible, British Edition",
       "almeida: Joao Ferreira de Almeida (portuguese)",
       "rccv: Romanian Corrected Cornilescu Version"
   )
+
 
   cli::cli_h1("Bible Translations Available")
   cli::cli_li(translations)
