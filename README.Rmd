@@ -82,6 +82,7 @@ proverbs::translations()
 
 ```text
 ── Bible Translations Available ────────────
+• esv: English Standard Version -requires API key
 • bbe: Bible in Basic English
 • kjv: King James Version
 • web: World English Bible (default)
@@ -98,6 +99,7 @@ You can pass those translation codes to `proverbs::proverb()`
 ```r
 proverbs::proverb(translation = "kjv")
 ```
+Note that 
 
 ## Credit
 The proverbs package takes advantage of the awesome free Bible api [https://bible-api.com/](https://bible-api.com/), maintained by [Tim Morgan](https://timmorgan.org/). Thanks, Tim!

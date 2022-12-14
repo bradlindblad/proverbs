@@ -15,7 +15,8 @@ Imports:
     httr,
     lubridate,
     magrittr,
-    purrr
+    purrr,
+    stringr
 Suggests: 
     covr,
     knitr,
