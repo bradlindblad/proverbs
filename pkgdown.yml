@@ -1,9 +1,10 @@
-pandoc: 2.7.3
+pandoc: 2.19.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   auto_proverb: auto_proverb.html
-last_built: 2022-11-17T03:34Z
+  esv_api_key: esv_api_key.html
+last_built: 2022-12-14T01:40Z
 urls:
   reference: https://bradlindblad.github.io/proverbs/reference
   article: https://bradlindblad.github.io/proverbs/articles

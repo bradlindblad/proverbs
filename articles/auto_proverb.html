@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">proverbs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,6 +49,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/auto_proverb.html">Print Proverb at R Startup</a>
+    <a class="dropdown-item" href="../articles/esv_api_key.html">Setting API Key for ESV Translation</a>
   </div>
 </li>
 <li class="nav-item">
@@ -75,7 +76,8 @@
 
 
 
-<script src="auto_proverb_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+<div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Print Proverb at R Startup</h1>
             
@@ -86,30 +88,39 @@
 
     
     
-<p>Sometimes it’s necessary to <em>force</em> oneself to do the thing that one should do. One way to do this is to have proverbs print the day’s proverb to console any time you start or restart R in RStudio.</p>
-<p>We can do that by modifying our .Rprofile file. For our purposes, we will modify the version that affects your base user environment.</p>
-<p>There is a handy function is the {usethis} package that helps us edit our .Rprofile:</p>
+<p>Sometimes it’s necessary to <em>force</em> oneself to do the thing
+that one should do. One way to do this is to have proverbs print the
+day’s proverb to console any time you start or restart R in RStudio.</p>
+<p>We can do that by modifying our .Rprofile file. For our purposes, we
+will modify the version that affects your base user environment.</p>
+<p>There is a handy function is the {usethis} package that helps us edit
+our .Rprofile:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bradlindblad/proverbs" class="external-link">proverbs</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://usethis.r-lib.org" class="external-link">usethis</a></span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">edit_r_profile</span><span class="op">(</span>scope <span class="op">=</span> <span class="st">"user"</span><span class="op">)</span></span></code></pre></div>
-<p>This will open up our .Rprofile file, and and we have to do is throw in our function from {proverbs} to make it spit out a proverb at startup:</p>
+<p>This will open up our .Rprofile file, and and we have to do is throw
+in our function from {proverbs} to make it spit out a proverb at
+startup:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="../reference/proverb.html">proverb</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<p>You’ll need to restart your session but you should be greeted with a proverb after that.</p>
-<p>If you want to customize the color of the printed output to sing more closely with your theme, for example, we can do that.</p>
+<p>You’ll need to restart your session but you should be greeted with a
+proverb after that.</p>
+<p>If you want to customize the color of the printed output to sing more
+closely with your theme, for example, we can do that.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="../reference/proverb.html">proverb</a></span><span class="op">(</span>main_color <span class="op">=</span> <span class="st">"black"</span>, accent_color <span class="op">=</span> <span class="st">"silver"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<p>This will print your proverb in black text with silver (grey) highlights.</p>
+<p>This will print your proverb in black text with silver (grey)
+highlights.</p>
   </main>
 </div>
 

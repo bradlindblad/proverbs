@@ -35,7 +35,7 @@
     
     <a class="navbar-brand me-2" href="index.html">proverbs</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,6 +51,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="articles/auto_proverb.html">Print Proverb at R Startup</a>
+    <a class="dropdown-item" href="articles/esv_api_key.html">Setting API Key for ESV Translation</a>
   </div>
 </li>
 <li class="nav-item">
@@ -83,6 +84,7 @@
 <p><em>“When the whirlwind passes, the wicked is no more, but the righteous has an everlasting foundation”</em></p>
 <p><em>- Proverbs 10:25 (NASB)</em></p>
 <!-- badges: start -->
+
 <p>A simple package to grab a Bible proverb corresponding to the day of the month.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -126,6 +128,7 @@ neither do I have the knowledge of the Holy One.
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="reference/translations.html">translations</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre class="text"><code>── Bible Translations Available ────────────
+• esv: English Standard Version -requires API key
 • bbe: Bible in Basic English
 • kjv: King James Version
 • web: World English Bible (default)
@@ -139,6 +142,7 @@ proverb(translation = 'bbe')</code></pre>
 <p>You can pass those translation codes to <code><a href="reference/proverb.html">proverbs::proverb()</a></code></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">proverbs</span><span class="fu">::</span><span class="fu"><a href="reference/proverb.html">proverb</a></span><span class="op">(</span>translation <span class="op">=</span> <span class="st">"kjv"</span><span class="op">)</span></span></code></pre></div>
+<p>Note that</p>
 </div>
 </div>
 <div class="section level2">
