@@ -1,5 +1,10 @@
 # proverbs (development version)
 
+# proverbs 0.3.0
+
+# proverbs 0.2.1
+Added support or ESV version
+
 # proverbs 0.2.0
 
 ## New features
