@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/man/figures/logo.png?raw=true" align="right" alt="" width="120" />
+# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/man/figures/logo.png?raw=true" align="right" width="120"/>
 
 *“When the whirlwind passes, the wicked is no more, but the righteous
 has an everlasting foundation”*
@@ -18,6 +18,7 @@ coverage](https://codecov.io/gh/bradlindblad/proverbs/branch/master/graph/badge.
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/proverbs)](https://CRAN.R-project.org/package=proverbs)
+
 <!-- badges: end -->
 
 A simple package to grab a Bible proverb corresponding to the day of the
@@ -102,7 +103,8 @@ You can pass those translation codes to `proverbs::proverb()`
 proverbs::proverb(translation = "kjv")
 ```
 
-Note that
+Note that an API key is needed to access the ESV translation. See [this
+vignette](https://bradlindblad.github.io/proverbs/articles/esv_api_key.html).
 
 ## Credit
 
