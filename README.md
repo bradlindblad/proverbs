@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/man/figures/logo.png?raw=true" align="right" width="120"/>
+# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/dev/man/figures/logo.png?raw=true" align="right" width="120"/>
 
 *“When the whirlwind passes, the wicked is no more, but the righteous
 has an everlasting foundation”*

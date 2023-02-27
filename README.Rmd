@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/master/man/figures/logo.png?raw=true" align="right" width="120"/>
+# proverbs <img src="https://github.com/bradlindblad/proverbs/blob/dev/man/figures/logo.png?raw=true" align="right" width="120"/>
 
 *"When the whirlwind passes, the wicked is no more, but the righteous has an everlasting foundation"*
 
