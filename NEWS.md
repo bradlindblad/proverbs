@@ -1,13 +1,15 @@
-# proverbs (development version)
+
 
 # proverbs 0.3.0
 
-# proverbs 0.2.1
-Added support or ESV version
+
+
+Added support for ESV version
 
 # proverbs 0.2.0
 
-## New features
+
+
 Added two new arguments to `proverbs::proverb()`
 
 * main_color
