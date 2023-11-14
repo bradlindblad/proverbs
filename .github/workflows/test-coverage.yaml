@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      ESV_API_KEY: ${{ secrets.ESV_API_KEY }}
 
     steps:
       - uses: actions/checkout@v3
