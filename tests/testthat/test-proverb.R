@@ -35,6 +35,12 @@ test_that("rccv works", {
 
 })
 
+test_that("esv works", {
+  testthat::skip_on_cran()
+  expect_output(proverb("esv"))
+
+})
+
 test_that("give bad translation", {
   testthat::skip_on_cran()
   expect_error(proverb("foo"))
@@ -54,3 +60,5 @@ test_that("give bad accent color", {
   expect_error(proverb(accent_color = "bro"))
 
 })
+
+

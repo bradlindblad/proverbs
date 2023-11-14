@@ -78,7 +78,7 @@ ping_esv <- function() {
       `include-short-copyright` = FALSE,
       `include-passage-references` = FALSE
     ) |>
-    httr2::req_headers(`Authorization` = paste0("Token ", API_KEY)) |>
+    httr2::req_headers(`Authorization` = glue::glue("Token { API_KEY }")) |>
     httr2::req_error(body = check_esv_error) |>
     httr2::req_perform()
 
