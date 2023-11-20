@@ -1,7 +1,12 @@
+# proverbs 0.4.0
 
 
-# proverbs 0.3.0
 
+# proverbs 0.4.0
+* Upgraded to {httr2} for all API work
+* Added more verbose error trapping
+* Switched from %>% to native pipe |>
+* Used {checkmate} to validate inputs
 
 
 Added support for ESV version
