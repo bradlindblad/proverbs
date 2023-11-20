@@ -5,12 +5,10 @@
 * Switched from %>% to native pipe |>
 * Used {checkmate} to validate inputs
 
-
+# proverbs 0.3.0
 Added support for ESV version
 
 # proverbs 0.2.0
-
-
 
 Added two new arguments to `proverbs::proverb()`
 
