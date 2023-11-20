@@ -1,6 +1,3 @@
-# proverbs 0.4.0
-
-
 
 # proverbs 0.4.0
 * Upgraded to {httr2} for all API work
